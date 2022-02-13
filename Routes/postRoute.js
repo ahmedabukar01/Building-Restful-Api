@@ -1,5 +1,5 @@
 const express = require('express');
-const posts = require('..models/post');
+const Posts = require('../models/post');
 
 const routes = express.Router();
 
@@ -12,7 +12,7 @@ routes.get('/specific',(req,res)=>{
 })
 
 routes.post('/',(req,res)=>{
-    console.log(req.body)
+    console.log(req.body);
 })
 
 

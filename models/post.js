@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 
 const postSchema = mongoose.Schema({
     title:{
-        type: 'string',
+        type: String,
         require: true,
     },
     body:{
-        type: 'string',
+        type: String,
         require: true,
     },
     date:{
-        type: 'date',
-        default: date.now()
+        type: Date,
+        default: Date.now()
     }
 })
 
-module.exports = mongoose.model('posts',postSchema);
+module.exports = mongoose.model('Posts',postSchema);
