@@ -3,17 +3,21 @@ const mongoose = require('mongoose');
 require('dotenv/config')
 const app = express();
 
+// import routes
+const postRoutes = require('./Routes/postRoute');
+
+// middlewares
+app.use('/posts',postRoutes);
+
 // routes
 app.get('/',(req,res)=>{
     res.send('we are in home')
 })
 
-app.get('/posts',(req,res)=>{
-    res.send('we are in posts')
-})
+
 
 // connect mongoose
-mongoose.connect(process.env.dbConnect,()=>{
+mongoose.connect(process.env.dbConnect,{ userNewUrlParser: true },()=>{
     console.log('connected to db');
 })
 
