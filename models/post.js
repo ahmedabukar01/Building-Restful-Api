@@ -5,13 +5,13 @@ const postSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    body:{
+    desc:{
         type: String,
         require: true,
     },
     date:{
         type: Date,
-        default: Date.now()
+        default: Date.now
     }
 })
 

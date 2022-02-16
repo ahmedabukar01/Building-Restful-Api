@@ -1,5 +1,5 @@
 const express = require('express');
-const Posts = require('../models/post');
+const Post = require('../models/Post');
 
 const routes = express.Router();
 
@@ -11,8 +11,21 @@ routes.get('/specific',(req,res)=>{
     res.send('here is the spicial one');
 })
 
-routes.post('/',(req,res)=>{
-    console.log(req.body);
+routes.post('/', (req,res)=>{
+    // const post = new Post({
+    //     title: req.body.title,
+    //     desc: req.body.desc
+    // });
+
+    // try{
+    //     const posted = await post.save();
+    //     res.json(posted)
+    // }catch(err){
+    //     res.json({message: err})
+    // }
+    console.log(req.body)
+    
+
 })
 
 
